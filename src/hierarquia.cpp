@@ -1,9 +1,10 @@
 #include "hierarquia.h"
 
-Hierarquia::Hierarquia(){
-    eita = 4;
+Hierarquia::Hierarquia(int numMembros){
+    this->numMembros = numMembros;
+    relacao.resize(numMembros);
 }
 
-void Hierarquia::printEita(){
-    std::cout << this->eita <<std::endl;
+void Hierarquia::adicionaRelacao(int quemComanda, int quemEComandado){
+    relacao[quemEComandado].push_back(quemComanda);
 }

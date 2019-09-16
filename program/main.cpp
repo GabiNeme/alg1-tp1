@@ -1,15 +1,18 @@
 #include <iostream>
 #include "hierarquia.h"
 
-int main()
-{
-    std::cout << "Hello, world!\n";
+int main(int argc, char *argv[]){
     
-    Hierarquia a;
-    a.printEita();
+    //Verifica entrada
+    if (argc >= 2){
+        std::cout << argv[1] << std::endl;
+    }else{
+        std::cout << "Deve ser informado um arquivo *.txt como parâmetro do programa" << std::endl;
+    }
     
+    Hierarquia a(10);
+    a.adicionaRelacao(9,1);
     
     return 0;
-    
     
 }

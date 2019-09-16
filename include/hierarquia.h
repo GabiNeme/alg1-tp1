@@ -1,15 +1,19 @@
 #ifndef HIERARQUIA_H
 #define HIERARQUIA_H
 #include <iostream>
+#include <vector>
+#include <list>
 
 class Hierarquia{
     
 private:
-    int eita;
+    int numMembros;
+    //Aresta vai de quem é comandado para quem comanda
+    std::vector<std::list<int>> relacao;
 
 public:
-    Hierarquia();
-    void printEita();
+    Hierarquia(int numMembros);
+    void adicionaRelacao(int quemComanda, int quemEComandado);
     
 };
 

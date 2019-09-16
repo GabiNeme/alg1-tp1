@@ -25,4 +25,4 @@ all: main
 
 
 clean:
-	$(RM) -r $(OBJDIR)/* * *.gcda *.gcno
+	$(RM) -r $(OBJDIR)/ tp1
