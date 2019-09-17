@@ -24,7 +24,9 @@ void FilaInstrucoes::adicionaInstrucao(std::string tipo, int aluno1, int aluno2)
 }
 
 void FilaInstrucoes::processaInstrucoes(Equipe &equipe){
-    
+    for(auto inst: listaInstrucoes){
+        inst->executaInstrucao(equipe);
+    }
 }
 
 void FilaInstrucoes::imprimeInstrucoes(){
