@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <list>
+#include <limits>
 
 class Equipe{
     
@@ -18,6 +19,10 @@ private:
     bool procuraCiclo(int i, std::string * estadoVisitacao);
     bool eComandante(int alunoComandado, int alunoComandante);
     bool trocaAresta(int aluno1, int aluno2);
+    
+    //Funções para instruição COMMANDER
+    int getIdade(int numIntegrante);
+    int menorIdade(int aluno, bool * visitado, bool ignorarIdade);
 
 
 public:
@@ -28,6 +33,8 @@ public:
     
     
     bool podeTrocarArestas(int aluno1, int aluno2);
+    int chefeMaisNovo(int comandado);
+    
     void printHierarquia();
     
 };

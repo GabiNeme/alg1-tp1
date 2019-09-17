@@ -113,6 +113,38 @@ bool Equipe::eComandante(int alunoComandado, int alunoComandante){
     return false;
 }
 
+
+
+int Equipe::chefeMaisNovo(int comandado){
+    bool visitado[numMembros];
+    
+    for(int i = 0; i < numMembros; i++){
+        visitado[i] = false;
+    }
+    
+    return menorIdade(comandado, visitado, true);
+}
+
+
+int Equipe::menorIdade(int aluno, bool * visitado, bool ignorarIdade){
+    visitado[aluno] = true;
+    
+    int idadeMin = std::numeric_limits<int>::max();
+    if (!ignorarIdade){
+        idadeMin = idade[aluno];
+    }
+    
+    int idadeMinHierarquiaSuperior;
+    for(auto i : hierarquia[aluno]){
+        if(!visitado[i]){
+            idadeMinHierarquiaSuperior = menorIdade(i, visitado, false);
+            if (idadeMinHierarquiaSuperior < idadeMin )
+                idadeMin = idadeMinHierarquiaSuperior;
+        }
+    }
+    return idadeMin;    
+}
+
 void Equipe::printHierarquia(){
     for(int i = 0 ; i < numMembros; i++){
         std::cout << i + 1 << " -> ";

@@ -15,6 +15,8 @@ int main(int argc, char *argv[]){
     
     
     instrucoes.processaInstrucoes(equipe);
+    //equipe.printHierarquia();
+    //std::cout << equipe.chefeMaisNovo(0) << std::endl;
     /*
     equipe.printHierarquia();
     std::cout << "Possui ciclo " << equipe.possuiCiclo() << std::endl;
