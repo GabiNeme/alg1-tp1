@@ -5,7 +5,13 @@ Commander::Commander(int aluno){
 }
     
 void Commander::executaInstrucao(Equipe &equipe){
-    std::cout << "C " << equipe.chefeMaisNovo(aluno) << std::endl;
+    int idade = equipe.chefeMaisNovo(aluno); 
+
+    if (idade == std::numeric_limits<int>::max()){
+        std::cout << "C *" << std::endl;
+    }else{
+        std::cout << "C " << equipe.chefeMaisNovo(aluno) << std::endl;
+    }
 }
 
 void Commander::imprimeInstrucao(){
