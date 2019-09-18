@@ -15,7 +15,9 @@ int main(int argc, char *argv[]){
     
     
     instrucoes.processaInstrucoes(equipe);
+    //int ordemDeFala[7];
     //equipe.printHierarquia();
+    //equipe.ordemDeFala(ordemDeFala);
     //std::cout << equipe.chefeMaisNovo(0) << std::endl;
     /*
     equipe.printHierarquia();

@@ -12,6 +12,9 @@ void Equipe::setNumMembros(int numMembros){
     idade.resize(numMembros);
 }
 
+int Equipe::getNumMembros(){
+    return this->numMembros;
+}
 
 void Equipe::setIdade (int numIntegrante, int idade){
     this->idade[numIntegrante] = idade;
@@ -145,12 +148,41 @@ int Equipe::menorIdade(int aluno, bool * visitado, bool ignorarIdade){
     return idadeMin;    
 }
 
+void Equipe::ordemDeFala(int *vetorOrdemFala){
+    bool visitado[numMembros];
+    int posVetOrdem = 0;
+    
+    for(int i = 0; i < numMembros; i++){
+        visitado[i] = false;
+    }
+
+    for(int i = 0; i < numMembros; i++){
+        if (visitado[i] == false){
+            momentoFinalizacao(i, posVetOrdem, vetorOrdemFala, visitado);
+        }
+    }   
+}
+
+
+void Equipe::momentoFinalizacao(int aluno, int &posVetOrdem, int *vetorOrdemFala, bool *visitado){
+    visitado[aluno] = true;
+
+    for(auto i : hierarquia[aluno]){
+        if(visitado[i] == false){
+            momentoFinalizacao(i, posVetOrdem, vetorOrdemFala, visitado);
+        }
+    }
+    vetorOrdemFala[posVetOrdem] = aluno + 1;
+    posVetOrdem +=  1;
+
+}
+
 void Equipe::printHierarquia(){
     for(int i = 0 ; i < numMembros; i++){
-        std::cout << i + 1 << " -> ";
+        std::cout << i  << " -> ";
         
         for (auto v : hierarquia[i]){
-            std::cout << v + 1 << " ";
+            std::cout << v  << " ";
         }
         
         std::cout << std::endl;
