@@ -2,6 +2,8 @@
 #define INSTRUCOES_H
 #include "equipe.h"
 
+//Interface Instrução
+
 class Instrucao{
 
 public:

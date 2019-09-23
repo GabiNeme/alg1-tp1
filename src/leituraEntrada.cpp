@@ -1,5 +1,8 @@
 #include "leituraEntrada.h"
 
+/*
+ * Lê o arquivo de entrada e adiciona à fila de instruções (que será posteriormente processada)
+ */
 void leEntrada(Equipe &equipe, FilaInstrucoes & instrucoes, std::string nomArquivo){
     
     std::ifstream arqEquipe (nomArquivo); //abre arquivo
@@ -38,7 +41,7 @@ void leEntrada(Equipe &equipe, FilaInstrucoes & instrucoes, std::string nomArqui
             int aluno1 = -1;
             int aluno2 = -1;
             
-            if (tipo != "M"){
+            if (tipo != "M"){ //possui mais um parâmetro
                 arqEquipe >> word;
                 aluno1 = std::stoi(word)-1; //primeiro numero (todas as instrucoes tem)
 
@@ -47,12 +50,10 @@ void leEntrada(Equipe &equipe, FilaInstrucoes & instrucoes, std::string nomArqui
                     aluno2 = std::stoi(word)-1; 
                 }
             }
+            //adiciona à fila de instruções
             instrucoes.adicionaInstrucao(tipo, aluno1, aluno2);
         }
 
-        //while (arqEquipe >> word){ //obtém cada palavra do arquivo
-             
-        //}
         arqEquipe.close(); //fecha arquivo
     }else{ //erro caso o arquivo não esteja no local certo
         std::cout << "Arquivo " << nomArquivo << " não encontrado." << std::endl;

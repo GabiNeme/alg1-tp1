@@ -2,6 +2,10 @@
 #define MEETING_H
 #include "instrucao.h"
 
+/*
+ * Instrução Meeting.
+ * Imprime a ordem de fala dos alunos
+ */
 class Meeting : public Instrucao{
     
 public:

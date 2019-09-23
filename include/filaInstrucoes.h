@@ -5,6 +5,9 @@
 #include "swap.h"
 #include "meeting.h"
 
+/*
+ * Armazena as intruções solicitadas pelo usuário e as executa após o fim da leitura
+ */
 class FilaInstrucoes{
     
 private:

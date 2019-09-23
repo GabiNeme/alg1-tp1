@@ -10,6 +10,7 @@ class Equipe{
 private:
     int numMembros;
     //Aresta vai de quem é comandado para quem comanda
+    //Exemplo, se A comanda B, existe uma aresta de B para A
     std::vector<std::list<int>> hierarquia;
     
     std::vector<int> idade;
