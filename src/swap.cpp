@@ -7,9 +7,9 @@ Swap::Swap(int aluno1, int aluno2){
     
 void Swap::executaInstrucao(Equipe &equipe){
     if(equipe.podeTrocarArestas(aluno1, aluno2)){
-        std::cout << "S T" << std::endl;
+        //std::cout << "S T" << std::endl;
     }else{
-        std::cout << "S N" << std::endl;
+        //std::cout << "S N" << std::endl;
         
     }
 }

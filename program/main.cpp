@@ -1,7 +1,17 @@
 #include "leituraEntrada.h"
+#include <stdio.h>
+#include <time.h>
 
 int main(int argc, char *argv[]){
-    
+
+    for(int i = 0; i < 100; i++){
+
+    //Medição de tempo de execução
+    clock_t tempoInicial;
+    clock_t tempoFinal;
+    tempoInicial = clock();
+
+
     Equipe equipe;
     
     FilaInstrucoes instrucoes;
@@ -15,23 +25,13 @@ int main(int argc, char *argv[]){
     
     
     instrucoes.processaInstrucoes(equipe);
-    //int ordemDeFala[7];
-    //equipe.printHierarquia();
-    //equipe.ordemDeFala(ordemDeFala);
-    //std::cout << equipe.chefeMaisNovo(0) << std::endl;
-    /*
-    equipe.printHierarquia();
-    std::cout << "Possui ciclo " << equipe.possuiCiclo() << std::endl;
-    equipe.trocaAresta(3,6);
-    std::cout << std::endl;
-    equipe.printHierarquia();
-    std::cout << "Possui ciclo " << equipe.possuiCiclo() << std::endl;
-    */
-    //std::cout << std::endl;
-    //instrucoes.imprimeInstrucoes();
-    
-    //std::cout << equipe.possuiCiclo() << std::endl;
-    
+
+    tempoFinal = clock();
+ 
+    std::cout << (tempoFinal- tempoInicial) * 1000.0 / CLOCKS_PER_SEC << std::endl;
+
+
+    }
     return 0;
     
 }

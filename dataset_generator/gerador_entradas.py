@@ -5,7 +5,7 @@
 import numpy as np
 import random
 
-N = 12
+N = 100
 
 # O número mínimo de arestas possíveis ocorre quando o grafo é
 # minimamente conectado, e é `N-1`. O número máximo -- lembrando que o
@@ -15,7 +15,7 @@ N = 12
 #M = random.randint(N - 1, N * (N - 1) / 2)
 M = int(N*(N -2)/4)
 
-I = 7 # @TODO: gerar também instruções aleatórias
+I = 3 # @TODO: gerar também instruções aleatórias
 
 print(N, M, I)
 
@@ -49,10 +49,6 @@ for a in arestas:
     print(a[0] + 1, a[1] + 1)
 
 #alterações gabi
-print("S", arestas[-3][0]+1, arestas[-3][1]+1)
-print("S", arestas[-2][0]+1, arestas[-2][1]+1)
 print("S", arestas[-1][0]+1, arestas[-1][1]+1)
 print("C 1")
-print("C 2")
-print("C 3")
 print("M")

@@ -8,9 +8,9 @@ void Commander::executaInstrucao(Equipe &equipe){
     int idade = equipe.chefeMaisNovo(aluno); 
 
     if (idade == std::numeric_limits<int>::max()){
-        std::cout << "C *" << std::endl;
+        //std::cout << "C *" << std::endl;
     }else{
-        std::cout << "C " << equipe.chefeMaisNovo(aluno) << std::endl;
+        //std::cout << "C " << equipe.chefeMaisNovo(aluno) << std::endl;
     }
 }
 
