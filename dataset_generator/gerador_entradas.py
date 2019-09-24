@@ -1,5 +1,5 @@
 # Criado por Bruno Andreotti, disponível em https://github.com/bpandreotti/alg-1-tp-1/blob/master/gerador.py
-
+# Modificado por Gabriela Neme
 
 #!/usr/bin/python3
 import numpy as np
