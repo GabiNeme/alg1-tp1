@@ -38,4 +38,4 @@ Os resultados das instruções são impressos na saída padrão, na mesma ordem 
 Para cada instrução Swap o programa imprime S T caso a troca tenha sido um sucesso e S N caso contrário. Para cada instrução Commander o programa imprime C X, em que X é um inteiro correspondente à idade da pessoa mais jovem que comanda o aluno especificado na entrada da instrução. Caso o aluno não seja comandado por ninguém, será impresso C *. 	Por fim, para a instrução Meeting será impressa a letra M seguida de uma ordem de fala dessa equipe.
 
 ## Exemplos
-Disponíveis na pasta "dataset" deste repósitorio, e as respectivas saídas estão na pasta "include" desse repositório.
+Disponíveis na pasta "dataset" deste repósitorio, e as respectivas saídas estão na pasta "resultados" desse repositório.
