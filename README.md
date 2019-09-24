@@ -32,10 +32,11 @@ Na segunda linha do arquivo devem existir N números, separados por espaço, que
 
 As próximas I linhas contêm, cada uma, uma instrução. As instruções do tipo Swap iniciam com um S seguido de dois inteiros, A e B, que representam os alunos que se deseja inverter a hierarquia. As instruções do tipo Commander são seguidas de um inteiro, indicando um aluno. Por fim, as instruções do tipo Meeting consistem em uma linha contendo apenas a letra M.
 
+### Exemplos
+Disponíveis na pasta "dataset" deste repósitorio.
+
 ## Saída de dados
 Os resultados das instruções são impressos na saída padrão, na mesma ordem que elas foram especificadas no arquivo de entrada.
 
 Para cada instrução Swap o programa imprime S T caso a troca tenha sido um sucesso e S N caso contrário. Para cada instrução Commander o programa imprime C X, em que X é um inteiro correspondente à idade da pessoa mais jovem que comanda o aluno especificado na entrada da instrução. Caso o aluno não seja comandado por ninguém, será impresso C *. 	Por fim, para a instrução Meeting será impressa a letra M seguida de uma ordem de fala dessa equipe.
 
-## Exemplos
-Disponíveis na pasta "dataset" deste repósitorio, e as respectivas saídas estão na pasta "resultados" desse repositório.
